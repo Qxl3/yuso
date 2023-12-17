@@ -65,16 +65,27 @@ create table if not exists post_favour
     index idx_userId (userId)
 ) comment '帖子收藏';
 
-INSERT INTO post (title, content, tags, thumbNum, favourNum, userId, createTime, updateTime, isDelete)
+
+-- 插入20条模拟数据
+INSERT INTO user (userAccount, userPassword, unionId, mpOpenId, userName, userAvatar, userProfile, userRole, createTime, updateTime, isDelete)
 VALUES
-    ('如何学习编程', '学习编程的步骤和建议', '["编程", "学习"]', 10, 5, 1, NOW(), NOW(), 0),
-    ('美食分享：最爱的披萨店', '分享我最喜欢的披萨店，强烈推荐！', '["美食", "披萨"]', 15, 8, 2, NOW(), NOW(), 0),
-    ('读书笔记：《时间简史》', '对霍金的《时间简史》进行了精彩的读后感', '["读书", "科普"]', 20, 12, 3, NOW(), NOW(), 0),
-    ('最近追剧推荐', '分享最近追的几部好剧，有没有人一起讨论一下？', '["影视", "剧集"]', 8, 6, 4, NOW(), NOW(), 0),
-    ('我的旅行日记', '最近去了一个美丽的地方，分享我的旅行日记和照片', '["旅行", "日记"]', 25, 18, 5, NOW(), NOW(), 0),
-    ('新手程序员常见问题汇总', '分享一些新手程序员经常遇到的问题及解决方案', '["编程", "问题"]', 15, 8, 6, NOW(), NOW(), 0),
-    ('摄影技巧分享', '分享一些摄影的基本技巧，希望能够帮助到摄影爱好者', '["摄影", "技巧"]', 12, 10, 7, NOW(), NOW(), 0),
-    ('电影推荐：经典科幻电影', '列举一些经典的科幻电影，喜欢科幻的朋友可以一起讨论', '["影视", "科幻"]', 18, 15, 8, NOW(), NOW(), 0),
-    ('学生党兼职经验分享', '分享一些学生党在学习之余的兼职经验和心得', '["兼职", "学生"]', 9, 7, 9, NOW(), NOW(), 0),
-    ('最爱的运动鞋推荐', '推荐一些舒适耐穿的运动鞋品牌和款式', '["时尚", "运动鞋"]', 20, 12, 10, NOW(), NOW(), 0),
-    ('编程书籍推荐', '分享一些值得一读的编程相关书籍', '["编程", "读书"]', 25, 20, 11, NOW(), NOW(), 0);
+    ('xiaoming001', 'password001', 'unionId001', 'mpOpenId001', '小明', 'avatar_url_001', '这是小明的简介', 'user', NOW(), NOW(), 0),
+    ('xiaohong002', 'password002', 'unionId002', 'mpOpenId002', '小红', 'avatar_url_002', '这是小红的简介', 'user', NOW(), NOW(), 0),
+    ('xiaoli003', 'password003', 'unionId003', 'mpOpenId003', '小丽', 'avatar_url_003', '这是小丽的简介', 'user', NOW(), NOW(), 0),
+    ('xiaozhang004', 'password004', 'unionId004', 'mpOpenId004', '小张', 'avatar_url_004', '这是小张的简介', 'user', NOW(), NOW(), 0),
+    ('xiaoxiao005', 'password005', 'unionId005', 'mpOpenId005', '小小', 'avatar_url_005', '这是小小的简介', 'user', NOW(), NOW(), 0),
+    ('xiaobai006', 'password006', 'unionId006', 'mpOpenId006', '小白', 'avatar_url_006', '这是小白的简介', 'user', NOW(), NOW(), 0),
+    ('xiaolan007', 'password007', 'unionId007', 'mpOpenId007', '小兰', 'avatar_url_007', '这是小兰的简介', 'user', NOW(), NOW(), 0),
+    ('xiaohan008', 'password008', 'unionId008', 'mpOpenId008', '小涵', 'avatar_url_008', '这是小涵的简介', 'user', NOW(), NOW(), 0),
+    ('xiaoyang009', 'password009', 'unionId009', 'mpOpenId009', '小阳', 'avatar_url_009', '这是小阳的简介', 'user', NOW(), NOW(), 0),
+    ('xiaochen010', 'password010', 'unionId010', 'mpOpenId010', '小晨', 'avatar_url_010', '这是小晨的简介', 'user', NOW(), NOW(), 0),
+    ('xiaowu011', 'password011', 'unionId011', 'mpOpenId011', '小吴', 'avatar_url_011', '这是小吴的简介', 'user', NOW(), NOW(), 0),
+    ('xiaoxu012', 'password012', 'unionId012', 'mpOpenId012', '小许', 'avatar_url_012', '这是小许的简介', 'user', NOW(), NOW(), 0),
+    ('xiaoyan013', 'password013', 'unionId013', 'mpOpenId013', '小燕', 'avatar_url_013', '这是小燕的简介', 'user', NOW(), NOW(), 0),
+    ('xiaochang014', 'password014', 'unionId014', 'mpOpenId014', '小常', 'avatar_url_014', '这是小常的简介', 'user', NOW(), NOW(), 0),
+    ('xiaohua015', 'password015', 'unionId015', 'mpOpenId015', '小华', 'avatar_url_015', '这是小华的简介', 'user', NOW(), NOW(), 0),
+    ('xiaoyao016', 'password016', 'unionId016', 'mpOpenId016', '小姚', 'avatar_url_016', '这是小姚的简介', 'user', NOW(), NOW(), 0),
+    ('xiaoxu017', 'password017', 'unionId017', 'mpOpenId017', '小许', 'avatar_url_017', '这是小许的简介', 'user', NOW(), NOW(), 0),
+    ('xiaohuo018', 'password018', 'unionId018', 'mpOpenId018', '小霍', 'avatar_url_018', '这是小霍的简介', 'user', NOW(), NOW(), 0),
+    ('xiaozhao019', 'password019', 'unionId019', 'mpOpenId019', '小赵', 'avatar_url_019', '这是小赵的简介', 'user', NOW(), NOW(), 0),
+    ('xiaoyu020', 'password020', 'unionId020', 'mpOpenId020', '小于', 'avatar_url_020', '这是小于的简介', 'user', NOW(), NOW(), 0);

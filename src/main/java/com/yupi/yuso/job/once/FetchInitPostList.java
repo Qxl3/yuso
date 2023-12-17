@@ -26,7 +26,6 @@ import java.util.stream.Collectors;
  * 获取初始帖子列表
  *
  */
-// 取消注释后，每次启动 springboot 项目时会执行一次 run 方法
 @Component
 @Slf4j
 public class FetchInitPostList implements CommandLineRunner {
@@ -52,7 +51,7 @@ public class FetchInitPostList implements CommandLineRunner {
         List<Post> postList = new ArrayList<>();
         List<User> userList = new ArrayList<>();
         boolean savePostResult=false;
-        boolean saveUserresult=false;
+       // boolean saveUserresult=false;
         for (Object record : records) {
             JSONObject tempRecord = (JSONObject) record;
             Post post = new Post();
@@ -65,15 +64,15 @@ public class FetchInitPostList implements CommandLineRunner {
             post.setId(tempRecord.getLong("id"));
             savePostResult = postService.saveOrUpdate(post);
 
-            User user = new User();
-            user.setId(tempRecord.getLong("userId"));
-            user.setUserPassword("000000");
-            user.setUserAccount(tempRecord.getStr("userId"));
-            user.setUserAvatar(tempRecord.getStr("cover"));
-            saveUserresult = userService.saveOrUpdate(user);
+//            User user = new User();
+//            user.setId(tempRecord.getLong("userId"));
+//            user.setUserPassword("000000");
+//            user.setUserAccount(tempRecord.getStr("userId"));
+//            user.setUserAvatar(tempRecord.getStr("cover"));
+//            saveUserresult = userService.saveOrUpdate(user);
 
             postList.add(post);
-            userList.add(user);
+           // userList.add(user);
         }
         // 3. 数据入库
         if (savePostResult) {
@@ -81,10 +80,10 @@ public class FetchInitPostList implements CommandLineRunner {
         } else {
             log.error("获取初始化帖子列表失败");
         }
-        if (saveUserresult) {
-            log.info("添加用户成功，条数 = {}", userList.size());
-        } else {
-            log.error("未获得新用户");
-        }
+//        if (saveUserresult) {
+//            log.info("添加用户成功，条数 = {}", userList.size());
+//        } else {
+//            log.error("未获得新用户");
+//        }
     }
 }

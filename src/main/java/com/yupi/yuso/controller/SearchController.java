@@ -26,9 +26,6 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/search")
 @Slf4j
 public class SearchController {
-
-
-
     @Resource
     private SearchFacade searchFacade;
 

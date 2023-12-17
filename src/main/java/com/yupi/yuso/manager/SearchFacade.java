@@ -29,7 +29,6 @@ import java.util.concurrent.CompletableFuture;
 @Component
 @Slf4j
 public class SearchFacade {
-
     @Resource
     private PostDataSource postDataSource;
 

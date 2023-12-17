@@ -1,0 +1,17 @@
+# 线上配置文件
+server:
+  port: 8102
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: 
+    username: 
+    password: 
+  # Elasticsearch 配置
+  # todo 需替换配置
+  elasticsearch:
+    uris: elasticsearch:9200
+mybatis-plus:
+  configuration:
+    # 生产环境关闭日志
+    log-impl: ''

@@ -18,7 +18,6 @@ import org.springframework.stereotype.Component;
  *
 
  */
-// todo 取消注释开启任务
 @Component
 @Slf4j
 public class IncSyncPostToEs {
